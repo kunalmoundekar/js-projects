@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamicCard-Generator</title>
+    <link rel="icon" type="image/png"
+        href="https://res.cloudinary.com/cloudinary-marketing/images/w_2000,h_1100/f_auto,q_auto/v1681925039/Web_Assets/blog/2c8422c4329074113adca7fd5a7f0b88d94275c7-274x184-1_28246e7ae1/2c8422c4329074113adca7fd5a7f0b88d94275c7-274x184-1_28246e7ae1-png?_i=AA">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+        body {
+            background-color: rgb(254, 254, 255);
+        }
+
+        .card-container,
+        .card-info {
+            width: 80%;
+            margin: 3%  auto;
+            /* border: 2px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        .card-info h2 {
+            margin: 0;
+            /* text-align: center; */
+            font-size: 4rem;
+            font-family: "Dosis", serif;
+        }
+        .card-info p {
+            text-align: center;
+            font-size: 2rem;
+            padding: 0.3rem 0;
+            font-family: "Dosis", serif;
+            color: rgb(122, 122, 205);
+        }
+        .user-form{
+            display: flex;
+            gap: 2rem;
+        }
+        .user-form input{
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid gainsboro;
+            color: rgb(122, 122, 205);
+            font-size: 1rem;
+
+
+
+            
+        }
+        .user-form input:focus{
+            box-shadow: 0px 0px 5px gray;
+            outline: none;
+        }
+        .user-form button {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            border: 1px solid rgb(122, 122, 205);
+            background-color: transparent;
+            color: rgb(122, 122, 205);
+            font-size: 1rem;
+        }
+        .user-form button:hover {
+            transform: scale(1.1);
+            transition: transform 0.4s ease;
+            box-shadow: 0px 0px 5px gray;
+
+        }
+        .card-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem  3rem;
+            width: 80%;
+            margin: auto;
+           
+
+        }
+        .card-container .cards{
+            padding: 1rem;
+            width: 250px;
+            box-shadow: 0px 0px 10px rgb(122, 122, 205);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cards p{
+            color:rgb(122, 122, 205) ;
+            text-align: center;
+        }
+        .cards h3{
+            margin: 1rem 0 0 0;
+            color:rgb(66, 66, 247) ;
+            text-align: center;
+        }
+        .cards button{
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: 1px solid rgb(122, 122, 205);
+            color:rgb(66, 66, 247) ;
+            font-size: 1rem;
+            background: transparent;    
+       }
+       .cards button:hover{
+        background-color:rgb(66, 66, 247) ;
+        color: aliceblue;
+        transition:all 0.5s;
+        cursor: pointer;
+       }
+
+        .cards img{
+            width: 250px;
+            height: 250px;
+       }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card-info">
+        <h2>Create Your Card</h2>
+        <p>"Start creating a card where you can set an image, title, <br> description, and button as you like."</p>
+        <div action="" class="user-form"> 
+            <input id="cardIMg" type="text" placeholder="Enter a image 'src' ">
+            <input id="cardtitle" type="text" placeholder="Enter a 'title' ">
+            <input id="card-dis" type="text" placeholder="Enter a 'description' ">
+            <input id="card-btn" type="text" placeholder="Enter a 'button text' ">
+            <button onclick="createCards()">Create card</button>
+        </div>
+    </div>
+
+    <div class="card-container" id="card-box">
+       
+    </div>
+
+
+
+
+    <script src="card.js"></script>
+</body>
+
+</html>
